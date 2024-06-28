@@ -15,8 +15,9 @@ public interface UserRepository extends MongoRepository<User, String> {
 //findByNameAndLastName yazarak hem isim hem soyisim kümesinde arama yapabilirdik.
 
     List<User> findAllByAddressCity(String city);
+    List<User> findAllByNameAndLastNameAndAddressCountry(String name, String lastName, String country);
 
-    Optional<User> findByNameAndLastNameAndAddressCountry(String name, String surName, String country);
+    //Optional<User> findByNameAndLastNameAndAddressCountry(String name, String lastName, String country);
 //isim,soyisim ve country ile arama yapam bir query yaz.
 
 }
