@@ -1,0 +1,13 @@
+spring:
+    application:
+        name=pia-grupbes-backend
+    data:
+        mongodb:
+            host;localhost
+            port:27017
+            database:pia-grupbes-db
+
+server:
+    servlet:
+        context-path: /pia-grupbes-backend/v1
+
