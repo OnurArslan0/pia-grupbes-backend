@@ -9,15 +9,10 @@ import java.util.Optional;
 
 @Repository
 public interface UserRepository extends MongoRepository<User, String> {
-    //üstteki string, modeldeki primary key ile aynı tipte olmalıdır.
 
-    Optional<User> findByName(String name);
-//findByNameAndLastName yazarak hem isim hem soyisim kümesinde arama yapabilirdik.
+    Optional<User> findByEmail(String email);
 
     List<User> findAllByAddressCity(String city);
     List<User> findAllByNameAndLastNameAndAddressCountry(String name, String lastName, String country);
-
-    //Optional<User> findByNameAndLastNameAndAddressCountry(String name, String lastName, String country);
-//isim,soyisim ve country ile arama yapam bir query yaz.
 
 }
